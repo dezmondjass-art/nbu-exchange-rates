@@ -30,3 +30,11 @@ saves the history to a CSV file.
 ## Data source
 
 NBU open API: https://bank.gov.ua/NBUStatService/v1/statdirectory/exchange
+
+## Daily automation (Windows)
+
+The script can run every day via Windows Task Scheduler:
+
+    schtasks /Create /SC DAILY /ST 18:00 /TN "NBU Rates" /TR "cmd /c cd /d C:\path\to\project && venv\Scripts\python.exe rates.py"
+
+Replace `C:\path\to\project` with the folder where the project is located.
