@@ -35,7 +35,7 @@ def save_rows(rows):
     with open(FILE, "a", newline="", encoding="utf-8-sig") as f:
         writer = csv.writer(f)
         if new_file:
-            writer.writerow(["Дата", "Валюта", "Курс", "Изменение"])
+               writer.writerow(["Date", "Currency", "Rate", "Change"])
         writer.writerows(rows)
 
 
